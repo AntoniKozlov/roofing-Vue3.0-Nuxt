@@ -1,4 +1,9 @@
 import Menu from '../menu/Menu.vue'
+import Contacts from '../contacts/Contacts.vue';
+import Portfolio from '../portfolio/Portfolio.vue';
+import Services from '../services/Services.vue';
+
+
 
 export default {
     name: 'MainApp',
@@ -6,6 +11,9 @@ export default {
         msg: String
     },
     components: {
-        Menu
+        Menu,
+        Contacts,
+        Portfolio,
+        Services
     }
 }

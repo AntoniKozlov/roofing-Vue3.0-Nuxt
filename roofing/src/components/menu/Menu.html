@@ -1,4 +1,58 @@
-<div>
-    <h1>{{ menuMsg }}</h1>
+
+
+<!--<b-navbar class="navbarBlock" fixed="top" toggleable="lg" type="dark">
+    <b-navbar-brand>Logo</b-navbar-brand>
+
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+    <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav class="ml-auto">
+            <b-nav-item v-scroll-to="'#home'">Главная</b-nav-item>
+            <b-nav-item v-scroll-to="'#production'">Продукция</b-nav-item>
+            <b-nav-item v-scroll-to="'#services'">Услуги</b-nav-item>
+            <b-nav-item v-scroll-to="'#portfolio'">Наши работы</b-nav-item>
+            <b-nav-item v-scroll-to="'#contacts'">Контакты</b-nav-item>
+        </b-navbar-nav>
+    </b-collapse>
+</b-navbar>-->
+<div class="hero-anime">
+    <div class="navigation-wrap bg-light start-header" :class="{'start-style': isStartStyle, 'scroll-on': isScrollOn}">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <a class="navbar-brand" href="https://front.codes/" target="_blank"><img src="https://assets.codepen.io/1462889/fcy.png" alt=""></a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                                    <a class="nav-link" href="#" v-scroll-to="'#home'" role="button">Главная</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="#" v-scroll-to="'#production'">Продукция</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="#" v-scroll-to="'#services'">Услуги</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="#" v-scroll-to="'#portfolio'">Портфолио</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="#" v-scroll-to="'#contacts'">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
 
