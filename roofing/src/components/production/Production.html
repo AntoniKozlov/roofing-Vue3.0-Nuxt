@@ -1,0 +1,15 @@
+<div>
+    <div id="production">
+        <div class="centered ourProduction"><u>Продукция</u></div>
+        <div class="gallery-image">
+            <div class="img-box" v-for="item in productionList">
+                <img alt="" :src="item.src"/>
+                <div class="transparent-box">
+                    <div class="caption">
+                        <p>{{item.name}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
