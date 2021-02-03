@@ -16,6 +16,7 @@
     background-color: #fff;
     overflow-x: hidden;
     transition: all 200ms linear;
+    max-width: 1920px;
 }
 .hover-image-8 a {
     display: inline-block;

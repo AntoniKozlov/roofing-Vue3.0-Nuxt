@@ -1,15 +1,55 @@
 <div>
     <div id="production">
         <div class="centered ourProduction"><u>Продукция</u></div>
-        <div class="gallery-image">
-            <div class="img-box" v-for="item in productionList">
-                <img alt="" :src="item.src"/>
-                <div class="transparent-box">
-                    <div class="caption">
-                        <p>{{item.name}}</p>
+        <div class="centered">
+            <div class="gallery-image">
+                <div class="img-box" v-for="item in productionList">
+                    <img alt="" :src="item.src"/>
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>{{item.name}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="centered ourProduction"><u>Сопутствующие товары</u></div>
+        <div class="cent">
+            <b-carousel
+                    id="carousel-1"
+                    class="heightCarousel"
+                    :interval="4000"
+                    controls
+                    indicators
+                    background="black"
+                    img-width="350"
+                    img-height="250"
+                    style="text-shadow: 1px 1px 2px #333;"
+
+            >
+
+                <b-carousel-slide v-for="elem in newRelatedProducts" class="img-box-related">
+                    <template #img>
+                        <div class="blocks">
+                            <div class="inbl" v-for="product in elem">
+                                <div class="row">
+                                    <div class="img-box-related">
+
+                                            <img
+                                                    class="d-block imgsrc"
+                                                    :src="product.src"
+                                                    alt=""
+                                            >
+                                            <div class="outerText centered">
+                                                <span class="styleTextUnderImg">{{product.name}}</span>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </b-carousel-slide>
+            </b-carousel>
         </div>
     </div>
 </div>

@@ -1,9 +1,12 @@
+#production {
 
+}
 .gallery-image {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 1920px;
 }
 
 .gallery-image img {
@@ -24,7 +27,12 @@
     position: relative;
     background-color: white;
 }
-
+.img-box-related{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    box-sizing: content-box;
+}
 .caption {
     position: absolute;
     bottom: 5px;
@@ -63,7 +71,7 @@
 .caption > p:nth-child(2) {
     font-size: 0.8em;
 }
-.ourProduction{
+.ourProduction {
     font-size: 30px;
     height: 40px;
     margin: 50px 0 20px;
@@ -72,3 +80,43 @@
     display: flex;
     justify-content: center;
 }
+.cent {
+
+}
+.heightCarousel {
+    height: 350px;
+
+}
+.blocks {
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+}
+.inbl {
+    height: 250px;
+    display: contents;
+}
+.imgsrc {
+    box-sizing: content-box;
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    display: inline-block;
+}
+.styleTextUnderImg{
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+}
+.outerText {
+    border: 1px solid white;
+}
+
+
+
+/* Display the columns below each other instead of side by side on small screens */
+
