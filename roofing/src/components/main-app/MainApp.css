@@ -5,6 +5,7 @@
     background-attachment: fixed;
     width: 100%;
     max-width: 1920px;
+    min-height: 400px;
     margin: auto;
     height: 100vh;
     -webkit-animation-duration: 2s;

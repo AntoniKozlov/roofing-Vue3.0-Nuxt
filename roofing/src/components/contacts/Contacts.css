@@ -1,1 +1,52 @@
+.contactsStyle {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.styleIcon{
+    cursor: pointer;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+}
+.styleIcon:hover {
 
+    transform: scale(1.1);
+}
+.blockPhone{
+justify-content: center;
+    display: flex;
+    margin-left: 10px;
+}
+.marginAuto {
+margin: auto;
+}
+.contactsBlock{
+    justify-content: center;
+    display: flex;
+}
+.instBlock{
+    margin: auto;
+}
+.contactsElem{
+    justify-content: space-around;
+    display: flex;
+
+}
+.copyrightLabel{
+    margin: auto 0;
+
+}
+.footerStyle{
+    box-shadow: 0 7px 20px 3px rgba(0, 0, 0, 0.506);
+}
+.backgroundFooter{
+    background: white;
+}
+.colorText{
+    color: white;
+}
+.fontSize{
+    font-size: 20px;
+}

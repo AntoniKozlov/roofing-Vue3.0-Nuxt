@@ -8,7 +8,7 @@
 import MainApp from './components/main-app/MainApp.vue'
 
 import Vue from 'vue'
-import { BootstrapVue } from 'bootstrap-vue'
+import { BootstrapVue, IconsPlugin  } from 'bootstrap-vue'
 import VueScrollTo from 'vue-scrollto'
 import VueScrollIndicator from 'vue-scroll-indicator';
 
@@ -20,7 +20,7 @@ import 'bootstrap';
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue);
 // Optionally install the BootstrapVue icon components plugin
-//Vue.use(IconsPlugin)
+Vue.use(IconsPlugin);
 
 Vue.use(VueScrollTo, {
   container: "body",
