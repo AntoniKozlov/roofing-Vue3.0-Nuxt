@@ -1,12 +1,12 @@
-import servicesList from '../../consts/servicesList';
+import workPlan from '../../consts/workPlan';
 
 export default {
-    name: 'Services',
+    name: 'WorkPlan',
     data() {
         return {
-            isAppear: false,
-            isHidden: true,
-            servicesList
+            isAppearWorkPlan: false,
+            isHiddenWorkPlan: true,
+            workPlan
         };
     },
     created() {
@@ -17,9 +17,9 @@ export default {
     },
     methods: {
         onScroll() {
-            if (window.scrollY >= 100) {
-                this.isAppear = true;
-                this.isHidden = false;
+            if (window.scrollY >= 1000) {
+                this.isAppearWorkPlan = true;
+                this.isHiddenWorkPlan = false;
             }
         }
     }

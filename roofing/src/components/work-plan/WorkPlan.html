@@ -1,0 +1,29 @@
+<div id="workPlan" class="container-fluid"
+     :class="{'appearWorkPlan': isAppearWorkPlan, 'hiddenWorkPlan': isHiddenWorkPlan}">
+    <div class="centered ourWorkPlan"><u>План работы</u></div>
+    <div class="centered ourWorkPlan fontStyle"><h5 class="textCenter">В первую очередь наши специалисты ориентируются
+        на требования заказчика и выполняют монтаж кровли под ключ в полном соответствии с предъявленными
+        требованиями клиента. Чтобы максимально соответствовать всем ожиданиям клиента, каждая из стадий работ
+        оговариваются по следующей схеме:</h5>
+    </div>
+    <div class="row" v-for="(plan, index) in workPlan">
+        <template v-if="index % 2 === 0">
+            <div class="img-section img-section-left">
+                <img :src="plan.src" alt=""/>
+                <div class="img-data">
+                    <h2 class="textCenter">{{plan.title}}</h2>
+                    <p><h5 class="textLeft">{{plan.description}}</h5></p>
+                </div>
+            </div>
+        </template>
+        <template v-else>
+            <div class="img-section img-section-right">
+                <div class="img-data">
+                    <h2 class="textCenter">{{plan.title}}</h2>
+                    <p><h5 class="textRight">{{plan.description}}</h5></p>
+                </div>
+                <img :src="plan.src" alt=""/>
+            </div>
+        </template>
+    </div>
+</div>
