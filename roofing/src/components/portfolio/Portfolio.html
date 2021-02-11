@@ -1,3 +1,21 @@
-<div>
-    <div id="portfolio"></div>
+<div id="portfolio">
+    <div class="centered ourProduction"><u>Портфолио</u></div>
+    <ul class="nav nav-tabs centered">
+        <li v-for="(itemList, index) in arrayPortfolio">
+            <button class="btn btn-light marginElements widthLi" :class="[index === selectedIndex ? 'active' : '']"
+                    aria-current="page"
+                    @click="changeActive(index)">{{itemList.name}}
+            </button>
+        </li>
+    </ul>
+    <div class="centered">
+        <template v-for="(itemList, index) in arrayPortfolio">
+            <div class="gallery-image" :class="[index !== selectedIndex ? 'hidden' : 'display']">
+                <div class="img-box" v-for="element in itemList.list">
+                    <img alt="" :src="element.src"/>
+                </div>
+            </div>
+        </template>
+    </div>
 </div>
+

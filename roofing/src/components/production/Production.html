@@ -1,7 +1,7 @@
 <div id="production">
     <div class="centered ourProduction"><u>Продукция</u></div>
     <div class="centered">
-        <div class="gallery-image">
+        <div class="gallery-image display">
             <div class="img-box" v-for="item in productionList">
                 <img alt="" :src="item.src"/>
                 <div class="transparent-box">
@@ -20,7 +20,7 @@
             :interval="4000"
             controls
             indicators
-            background="DeepSkyBlue"
+            background="PaleTurquoise"
             style="text-shadow: 1px 1px 2px #333;"
     >
         <b-carousel-slide v-for="elem in relatedProducts" class="img-box-related" :key="elem.src">
