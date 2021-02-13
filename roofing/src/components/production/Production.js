@@ -8,8 +8,5 @@ export default {
             productionList,
             relatedProducts
         };
-    },
-    created() {
-        window.addEventListener('scroll', this.onScroll);
-    },
+    }
 }

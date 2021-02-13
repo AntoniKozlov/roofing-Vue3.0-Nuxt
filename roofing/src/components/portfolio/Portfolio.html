@@ -11,11 +11,17 @@
     <div class="centered">
         <template v-for="(itemList, index) in arrayPortfolio">
             <div class="gallery-image" :class="[index !== selectedIndex ? 'hidden' : 'display']">
-                <div class="img-box" v-for="element in itemList.list">
-                    <img alt="" :src="element.src"/>
+                <div class="img-box zoomIn" v-for="element in itemList.list">
+                    <img @click="showDialog(element.src)" alt="" :src="element.src"/>
                 </div>
             </div>
         </template>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal-img" @click="closeDialog()" :class="[isShow ? 'show' : 'hidden']">
+        <img class="modal-content-img zoomOut" :src="src" id="img01">
+        <div id="caption"></div>
     </div>
 </div>
 

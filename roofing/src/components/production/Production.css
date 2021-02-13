@@ -62,7 +62,7 @@
     opacity: 1.0;
 }
 
-.img-box:hover {
+.cursorPointer {
     cursor: pointer;
 }
 

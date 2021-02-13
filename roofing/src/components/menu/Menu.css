@@ -4,3 +4,8 @@
     transform: scale(1.5);
 }
 
+.sizeLogoPhone{
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+}
