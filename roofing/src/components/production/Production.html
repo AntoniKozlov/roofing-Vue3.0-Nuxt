@@ -15,13 +15,11 @@
     <div class="centered ourProduction"><u>Сопутствующие товары</u></div>
     <b-carousel
             id="carousel-1"
-            class="styleCarousel"
             v-model="slide"
             :interval="4000"
             controls
             indicators
-            background="PaleTurquoise"
-            style="text-shadow: 1px 1px 2px #333;"
+            background="#dae0e5"
     >
         <b-carousel-slide v-for="elem in relatedProducts" class="img-box-related" :key="elem.src">
             <template #img>
