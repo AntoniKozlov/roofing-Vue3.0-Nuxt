@@ -368,6 +368,7 @@
         padding: 0;
         margin: 0;
         transition: all 200ms linear;
+        left: -100px
     }
     .nav-item.show .dropdown-menu {
         opacity: 1;
