@@ -13,29 +13,32 @@
         </div>
     </div>
     <div class="centered ourProduction"><u>Сопутствующие товары</u></div>
-    <b-carousel
-            id="carousel-1"
-            v-model="slide"
-            :interval="4000"
-            controls
-            indicators
-            background="#dae0e5"
+    <Slider
+            animation="fade"
+            v-model="sliderValue"
+            :duration="5000"
+            :speed="1000"
+            style="height: 450px"
     >
-        <b-carousel-slide v-for="elem in relatedProducts" class="img-box-related" :key="elem.src">
-            <template #img>
-                <div class="img-section-related centered cont">
-                    <img
-                            class="marginAuto"
-                            height="300"
-                            width="350"
-                            :src="elem.src"
-                            alt="image slot"
-                    >
-                    <div class="content">
-                        <p>{{elem.name}}</p>
-                    </div>
+        <SliderItem
+                v-for="(elem, index) in relatedProducts"
+                :key="index"
+                @click="changeIndex(1);"
+                class="sliderStyle"
+        >
+            <div class="img-section-related centered cont">
+                <img
+                        :id="'img'+index"
+                        class="marginAuto"
+                        height="300"
+                        width="350"
+                        :src="elem.src"
+                        :alt="index"
+                >
+                <div class="content">
+                    <p>{{elem.name}}</p>
                 </div>
-            </template>
-        </b-carousel-slide>
-    </b-carousel>
+            </div>
+        </SliderItem>
+    </Slider>
 </div>
