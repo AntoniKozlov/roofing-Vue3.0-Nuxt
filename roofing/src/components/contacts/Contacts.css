@@ -23,7 +23,7 @@
 .contactsElem {
     justify-content: space-around;
     display: flex;
-    background-color: #337AB7
+    background-color: #337AB7;
 }
 
 .copyrightLabel {
@@ -36,9 +36,17 @@
 
 .colorText {
     color: white;
+    text-decoration: none;
 }
 
 .fontSize {
     font-size: 20px;
 }
 
+.colorPhone:hover {
+    color: black;
+}
+
+.textDecoration {
+    text-decoration: black;
+}

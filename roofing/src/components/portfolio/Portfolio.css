@@ -88,3 +88,8 @@
 .zoomOut:hover {
     cursor: zoom-out;
 }
+
+.colors {
+    background-color: #337AB7;
+    color: white;
+}

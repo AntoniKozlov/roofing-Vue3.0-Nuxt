@@ -2,7 +2,7 @@
     <div class="centered ourProduction"><u>Портфолио</u></div>
     <ul class="nav nav-tabs centered">
         <li v-for="(itemList, index) in arrayPortfolio">
-            <button class="btn btn-light marginElements widthLi" :class="[index === selectedIndex ? 'active' : '']"
+            <button class="btn colors marginElements widthLi" :class="[index === selectedIndex ? 'active' : '']"
                     aria-current="page"
                     @click="changeActive(index)">{{itemList.name}}
             </button>
