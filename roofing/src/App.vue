@@ -16,6 +16,7 @@ import 'bootstrap';
 
 import MainApp from './components/main-app/MainApp.vue'
 
+
 Vue.use(VueScrollIndicator);
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
