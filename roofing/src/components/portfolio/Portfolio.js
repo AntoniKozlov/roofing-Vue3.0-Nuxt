@@ -1,10 +1,7 @@
-// import bitumenList from '../../consts/portfolio-categories/bitumen';
-// import foldList from '../../consts/portfolio-categories/fold';
-// import mountingList from '../../consts/portfolio-categories/mounting';
-// import metalTileList from '../../consts/portfolio-categories/metalTile';
-
-import { getPortfolioUrlsByPath, getDownloadURLMethod } from "../../services/PortfolioService";
-import Vue from 'vue';
+import bitumenList from '../../consts/portfolio-categories/bitumen';
+import foldList from '../../consts/portfolio-categories/fold';
+import mountingList from '../../consts/portfolio-categories/mounting';
+import metalTileList from '../../consts/portfolio-categories/metalTile';
 
 export default {
     name: 'Portfolio',
@@ -14,20 +11,16 @@ export default {
             src: '',
             isShow: false,
             arrayPortfolio: [
-                {name: "Битумная черепица", list: [], path: "portfolio/bitumen", isLoaded: false},
-                {name: "Фальцевая кровля", list: [], path: "portfolio/fold", isLoaded: false},
-                {name: "Процесс монтажа", list: [], path: "portfolio/mounting", isLoaded: false},
-                {name: "Металлочерепица", list: [], path: "portfolio/metal-tile", isLoaded: false}
+                {name: "Битумная черепица", list: bitumenList, isLoaded: false},
+                {name: "Фальцевая кровля", list: foldList, isLoaded: false},
+                {name: "Процесс монтажа", list: mountingList, isLoaded: false},
+                {name: "Металлочерепица", list: metalTileList, isLoaded: false}
             ]
         };
-    },
-    mounted() {
-        this.getPortfolioUrlsByPath(this.arrayPortfolio[0]);
     },
     methods:{
         changeActive(selectedListIndex) {
             this.selectedIndex = selectedListIndex;
-            this.getPortfolioUrlsByPath(this.arrayPortfolio[selectedListIndex]);
         },
         showDialog(src) {
             this.src = src;
@@ -36,24 +29,6 @@ export default {
         closeDialog() {
             this.src = '';
             this.isShow = false;
-        },
-        async getPortfolioUrlsByPath(arrayPortfolio) {
-            if (arrayPortfolio.isLoaded) return;
-
-            await getPortfolioUrlsByPath(arrayPortfolio.path).then(res => {
-                const images = [];
-                res.items.forEach(image => {
-                    getDownloadURLMethod(image).then(res => {
-                        images.push(res);
-                        Vue.set(arrayPortfolio, 'list', images);
-                    }).catch(e => {
-                        console.error(e);
-                    });
-                });
-            }).catch(e => {
-                console.error(e);
-            });
-            arrayPortfolio.isLoaded = true;
         },
     }
 }
