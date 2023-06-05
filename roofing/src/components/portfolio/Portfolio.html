@@ -12,7 +12,7 @@
         <template v-for="(itemList, index) in arrayPortfolio">
             <div class="gallery-image" :class="[index !== selectedIndex ? 'hidden' : 'display']">
                 <div class="img-box zoomIn" v-for="element in itemList.list">
-                    <img alt="" :src="element"/>
+                    <img @click="showDialog(element)" alt="" :src="element"/>
                 </div>
             </div>
         </template>

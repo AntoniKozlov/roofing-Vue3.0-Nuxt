@@ -1,20 +1,21 @@
 import db from '../firebase/init.js'
+
 import { ref, listAll } from "firebase/storage"
+import { getDownloadURL } from "firebase/storage"
 
 async function getPortfolioUrlsByPath(path) {
     const bitumenRefs = ref(db, path);
-   // const portfolioUrls = [];
     const listUrls = await listAll(bitumenRefs);
 
     return listUrls;
-    // let requests = listUrls.items.map(image => getDownloadURL(image));
-    // return Promise.allSettled(requests).then(resUrl => {
-    //     //console.log(resUrl)
-    //     //portfolioUrls.push(resUrl)
-    //     return resUrl;
-    // })
+}
+
+function getDownloadURLMethod(image) {
+    const res = getDownloadURL(image);
+    return res;
 }
 
 export {
-    getPortfolioUrlsByPath
+    getPortfolioUrlsByPath,
+    getDownloadURLMethod
 }

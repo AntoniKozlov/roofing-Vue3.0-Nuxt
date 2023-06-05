@@ -1,5 +1,6 @@
 import productionList from '../../consts/productionList';
 import relatedProducts from '../../consts/relatedProducts';
+
 import { Slider, SliderItem } from "vue-easy-slider";
 
 export default {

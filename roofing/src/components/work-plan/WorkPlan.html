@@ -9,7 +9,7 @@
     <div class="row" v-for="(plan, index) in workPlan">
         <template v-if="index % 2 === 0">
             <div class="img-section img-section-left">
-                <img :src="plan.src" alt=""/>
+                <img v-lazy="plan.src" alt=""/>
                 <div class="img-data">
                     <h2 class="textCenter">{{plan.title}}</h2>
                     <p><h5 class="textLeft">{{plan.description}}</h5></p>
@@ -22,7 +22,7 @@
                     <h2 class="textCenter">{{plan.title}}</h2>
                     <p><h5 class="textRight">{{plan.description}}</h5></p>
                 </div>
-                <img :src="plan.src" alt=""/>
+                <img v-lazy="plan.src" alt=""/>
             </div>
         </template>
     </div>

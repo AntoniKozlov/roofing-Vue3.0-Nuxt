@@ -15,8 +15,9 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'bootstrap';
 
 import MainApp from './components/main-app/MainApp.vue'
+import Lazy from './components/lazy/lazy-image';
 
-
+Vue.use(Lazy);
 Vue.use(VueScrollIndicator);
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
@@ -36,7 +37,7 @@ Vue.use(VueScrollTo, {
 export default {
     name: 'App',
     components: {
-        MainApp
+        MainApp,
     }
 }
 </script>

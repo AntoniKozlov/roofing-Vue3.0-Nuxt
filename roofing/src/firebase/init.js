@@ -24,9 +24,6 @@ const firebaseConfig = {
 
 // init firebase
 const app = initializeApp(firebaseConfig)
-
-// init firestore service
-//const db = getFirestore();
 const db = getStorage(app);
-console.log('deb: ', db)
+
 export default db

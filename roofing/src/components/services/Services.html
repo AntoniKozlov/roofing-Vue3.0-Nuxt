@@ -2,7 +2,7 @@
     <div class="centered ourServices"><u>Наши услуги</u></div>
     <div class="img-section" v-for="(service, index) of servicesList">
         <template v-if="index % 2 === 0">
-            <img :src="service.src" alt=""/>
+            <img v-lazy="service.src" alt=""/>
             <div class="img-data">
                 <p><h5 class="textCenter">{{service.description}}</h5></p>
             </div>
@@ -11,7 +11,7 @@
             <div class="img-data">
                 <p><h5 class="textCenter">{{service.description}}</h5></p>
             </div>
-            <img :src="service.src" alt=""/>
+            <img v-lazy="service.src" alt=""/>
         </template>
     </div>
 </div>

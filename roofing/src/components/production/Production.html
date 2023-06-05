@@ -3,7 +3,7 @@
     <div class="centered">
         <div class="gallery-image display">
             <div class="img-box cursorPointer" v-for="item in productionList">
-                <img alt="" :src="item.src"/>
+                <img alt="" v-lazy="item.src"/>
                 <div class="transparent-box">
                     <div class="caption">
                         <p>{{item.name}}</p>
@@ -32,7 +32,7 @@
                         class="marginAuto"
                         height="300"
                         width="350"
-                        :src="elem.src"
+                        v-lazy="elem.src"
                         :alt="index"
                 >
                 <div class="content">
