@@ -1,4 +1,4 @@
-<div id="portfolio">
+<div id="portfolio" class="fade-in">
     <div class="centered ourProduction"><u>Портфолио</u></div>
     <ul class="nav nav-tabs centered">
         <li v-for="(itemList, index) in arrayPortfolio">
@@ -11,7 +11,7 @@
     <div class="centered">
         <template v-for="(itemList, index) in arrayPortfolio">
             <div class="gallery-image" :class="[index !== selectedIndex ? 'hidden' : 'display']">
-                <div class="img-box zoomIn" v-for="element in itemList.list">
+                <div class="img-box zoomIn fade-in" v-for="element in itemList.list">
                     <img @click="showDialog(element.src)" alt="" v-lazy="element.src"/>
                 </div>
             </div>

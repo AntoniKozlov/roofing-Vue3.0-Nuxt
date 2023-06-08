@@ -1,17 +1,9 @@
 <div id="services" class="container-fluid">
     <div class="centered ourServices"><u>Наши услуги</u></div>
-    <div class="img-section" v-for="(service, index) of servicesList">
-        <template v-if="index % 2 === 0">
-            <img v-lazy="service.src" alt=""/>
-            <div class="img-data">
-                <p><h5 class="textCenter">{{service.description}}</h5></p>
-            </div>
-        </template>
-        <template v-else>
-            <div class="img-data">
-                <p><h5 class="textCenter">{{service.description}}</h5></p>
-            </div>
-            <img v-lazy="service.src" alt=""/>
-        </template>
+    <div class="img-section fade-in" v-for="(service, index) of servicesList" :class="index % 2 === 0 ? 'ltr-direction' : 'rtl-direction'">
+        <img v-lazy="service.src" alt=""/>
+        <div class="img-data">
+            <p><h5 class="textCenter">{{service.description}}</h5></p>
+        </div>
     </div>
 </div>

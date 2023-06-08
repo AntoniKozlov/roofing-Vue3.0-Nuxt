@@ -5,6 +5,7 @@
 </template>
 
 <script>
+
 import Vue from 'vue';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 import VueScrollTo from 'vue-scrollto';
@@ -15,7 +16,8 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'bootstrap';
 
 import MainApp from './components/main-app/MainApp.vue'
-import Lazy from './components/lazy/lazy-image';
+import Lazy from './directives/LazyImage';
+
 
 Vue.use(Lazy);
 Vue.use(VueScrollIndicator);
@@ -38,8 +40,9 @@ export default {
     name: 'App',
     components: {
         MainApp,
-    }
+    },
 }
+
 </script>
 
 <style>
@@ -188,4 +191,20 @@ h1 span:nth-child(14) {
 h1 span:nth-child(15) {
     transition-delay: 1450ms;
 }
+
+.fade-in {
+    opacity: 0;
+    transform: scale(0.8);
+    box-sizing: border-box;
+    transition: 1.3s all cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.ltr-direction {
+    direction: ltr;
+}
+
+.rtl-direction {
+    direction: rtl;
+}
+
 </style>

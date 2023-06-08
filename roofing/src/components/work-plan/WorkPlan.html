@@ -7,23 +7,12 @@
         оговариваются по следующей схеме:</h5>
     </div>
     <div class="row" v-for="(plan, index) in workPlan">
-        <template v-if="index % 2 === 0">
-            <div class="img-section img-section-left">
-                <img v-lazy="plan.src" alt=""/>
-                <div class="img-data">
-                    <h2 class="textCenter">{{plan.title}}</h2>
-                    <p><h5 class="textLeft">{{plan.description}}</h5></p>
-                </div>
+        <div class="img-section" :class="index % 2 === 0 ? 'ltr-direction img-section-left' : 'rtl-direction img-section-right'">
+            <img class="fade-in" v-lazy="plan.src" alt=""/>
+            <div class="img-data fade-in">
+                <h2 class="textCenter">{{plan.title}}</h2>
+                <p><h5 class="textLeft">{{plan.description}}</h5></p>
             </div>
-        </template>
-        <template v-else>
-            <div class="img-section img-section-right">
-                <div class="img-data">
-                    <h2 class="textCenter">{{plan.title}}</h2>
-                    <p><h5 class="textRight">{{plan.description}}</h5></p>
-                </div>
-                <img v-lazy="plan.src" alt=""/>
-            </div>
-        </template>
+        </div>
     </div>
 </div>

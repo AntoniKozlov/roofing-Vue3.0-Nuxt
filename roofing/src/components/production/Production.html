@@ -2,7 +2,7 @@
     <div class="centered ourProduction"><u>Продукция</u></div>
     <div class="centered">
         <div class="gallery-image display">
-            <div class="img-box cursorPointer" v-for="item in productionList">
+            <div class="img-box cursorPointer fade-in" v-for="item in productionList">
                 <img alt="" v-lazy="item.src"/>
                 <div class="transparent-box">
                     <div class="caption">
@@ -14,6 +14,7 @@
     </div>
     <div class="centered ourProduction"><u>Сопутствующие товары</u></div>
     <Slider
+            class="fade-in"
             animation="fade"
             v-model="sliderValue"
             :duration="5000"
