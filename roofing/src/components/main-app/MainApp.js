@@ -1,9 +1,9 @@
-import Menu from '../menu/Menu.vue'
-import Contacts from '../contacts/Contacts.vue';
-import Portfolio from '../portfolio/Portfolio.vue';
-import Services from '../services/Services.vue';
-import Production from '../production/Production.vue';
-import WorkPlan from '../work-plan/WorkPlan.vue';
+import Menu from '../menu/MenuSection.vue'
+import ContactsSection from '../contacts/ContactsSection.vue';
+import PortfolioSection from '../portfolio/PortfolioSection.vue';
+import ServicesSection from '../services/ServicesSection.vue';
+import ProductionSection from '../production/ProductionSection.vue';
+import WorkPlanSection from '../work-plan/WorkPlan.vue';
 import ScrollAppear from '../../shared/ScrollAppear';
 
 
@@ -12,10 +12,10 @@ export default {
     mixins: [ScrollAppear],
     components: {
         Menu,
-        Contacts,
-        Portfolio,
-        Services,
-        Production,
-        WorkPlan,
+        ContactsSection,
+        PortfolioSection,
+        ServicesSection,
+        ProductionSection,
+        WorkPlanSection,
     }
 }

@@ -4,7 +4,7 @@ import relatedProducts from '../../consts/relatedProducts';
 import { Slider, SliderItem } from "vue-easy-slider";
 
 export default {
-    name: 'Production',
+    name: 'ProductionSection',
     components: {
         Slider,
         SliderItem

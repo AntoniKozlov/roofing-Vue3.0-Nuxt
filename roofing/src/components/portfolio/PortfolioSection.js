@@ -4,7 +4,7 @@ import mountingList from '../../consts/portfolio-categories/mounting';
 import metalTileList from '../../consts/portfolio-categories/metalTile';
 
 export default {
-    name: 'Portfolio',
+    name: 'PortfolioSection',
     data() {
         return {
             selectedIndex: 0,

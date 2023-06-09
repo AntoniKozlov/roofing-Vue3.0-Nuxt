@@ -1,54 +1,52 @@
 <template>
-    <div>
-        <MainApp msg="Welcome to Your Vue.js" />
-    </div>
+  <div>
+      <MainApp />
+  </div>
 </template>
 
 <script>
-
-import Vue from 'vue';
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
-import VueScrollTo from 'vue-scrollto';
-import VueScrollIndicator from 'vue-scroll-indicator';
+//  import Vue from 'vue';
+// import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
+// import VueScrollTo from 'vue-scrollto';
+// import VueScrollIndicator from 'vue-scroll-indicator';
 
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-vue/dist/bootstrap-vue.css';
+// import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'bootstrap';
 
 import MainApp from './components/main-app/MainApp.vue'
-import Lazy from './directives/LazyImage';
+// import Lazy from './directives/LazyImage';
 
 
-Vue.use(Lazy);
-Vue.use(VueScrollIndicator);
-Vue.use(BootstrapVue);
-Vue.use(IconsPlugin);
-Vue.use(VueScrollTo, {
-    container: "body",
-    duration: 500,
-    easing: "ease",
-    offset: 0,
-    force: true,
-    cancelable: true,
-    onStart: false,
-    onDone: false,
-    onCancel: false,
-    x: false,
-    y: true
-});
+//Vue.use(Lazy);
+// Vue.use(VueScrollIndicator);
+// Vue.use(BootstrapVue);
+// Vue.use(IconsPlugin);
+// Vue.use(VueScrollTo, {
+//     container: "body",
+//     duration: 500,
+//     easing: "ease",
+//     offset: 0,
+//     force: true,
+//     cancelable: true,
+//     onStart: false,
+//     onDone: false,
+//     onCancel: false,
+//     x: false,
+//     y: true
+// });
 export default {
     name: 'App',
     components: {
         MainApp,
     },
 }
-
 </script>
 
 <style>
 /* #Primary
     ================================================== */
-body {
+    body {
     font-family: 'Times New Roman', sans-serif;
     /*Comic Sans MS, Monotype Corsiva*/
     font-size: 16px;
@@ -206,5 +204,4 @@ h1 span:nth-child(15) {
 .rtl-direction {
     direction: rtl;
 }
-
 </style>

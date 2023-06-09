@@ -1,7 +1,7 @@
 import servicesList from '../../consts/servicesList';
 
 export default {
-    name: 'Services',
+    name: 'ServicesSection',
     data() {
         return {
             servicesList

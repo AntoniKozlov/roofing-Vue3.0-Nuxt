@@ -11,7 +11,7 @@ $('body').on('mouseenter mouseleave', '.nav-item', function (e) {
 });
 
 export default {
-    name: 'Menu',
+    name: 'MenuSection',
     data() {
         return {
             isStartStyle: true,

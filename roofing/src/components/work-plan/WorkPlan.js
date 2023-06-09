@@ -1,7 +1,7 @@
 import workPlan from '../../consts/workPlan';
 
 export default {
-    name: 'WorkPlan',
+    name: 'WorkPlanSection',
     data() {
         return {
             isAppearWorkPlan: false,
