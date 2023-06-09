@@ -15,10 +15,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
 
 import MainApp from './components/main-app/MainApp.vue'
-// import Lazy from './directives/LazyImage';
 
-
-//Vue.use(Lazy);
 // Vue.use(VueScrollIndicator);
 // Vue.use(BootstrapVue);
 // Vue.use(IconsPlugin);
