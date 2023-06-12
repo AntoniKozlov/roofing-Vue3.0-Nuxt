@@ -13,33 +13,40 @@
         </div>
     </div>
     <div class="centered ourProduction"><u>Сопутствующие товары</u></div>
-    <!-- <Slider
-            class="fade-in"
-            animation="fade"
-            v-model="sliderValue"
-            :duration="5000"
-            :speed="1000"
-            style="height: 450px;box-shadow: 0 1px 15px 3px #337AB7;"
+    <carousel 
+        :items-to-show="sliderValue" 
+        :autoplay="5000" 
+        :mouseDrag="true" 
+        :touchDrag="true"
+        :wrap-around="true"
+        :i18n="{
+            'iconArrowRight': 'Следующий слайд',
+            'iconArrowLeft': 'Предыдущий слайд',
+        }"
     >
-        <SliderItem
-                v-for="(elem, index) in relatedProducts"
-                :key="index"
-                @click="changeIndex(1);"
-                class="sliderStyle"
+        <slide 
+            v-for="(elem, index) in relatedProducts" 
+            :key="index" 
+            class="sliderStyle"
         >
             <div class="img-section-related centered cont">
                 <img
-                        :id="'img'+index"
-                        class="marginAuto"
-                        height="300"
-                        width="350"
-                        v-lazy="elem.src"
-                        :alt="index"
+                    :id="'img'+index"
+                    class="marginAuto"
+                    height="300"
+                    width="350"
+                    v-lazy="elem.src"
+                    :alt="index"
                 >
                 <div class="content">
                     <p>{{elem.name}}</p>
                 </div>
             </div>
-        </SliderItem>
-    </Slider> -->
+        </slide>
+    
+        <template #addons>
+          <navigation />
+          <pagination />
+        </template>
+    </carousel>
 </div>

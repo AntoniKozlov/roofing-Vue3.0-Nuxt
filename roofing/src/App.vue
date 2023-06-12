@@ -5,14 +5,11 @@
 </template>
 
 <script>
-//  import Vue from 'vue';
-// import VueScrollIndicator from 'vue-scroll-indicator';
-
 import 'bootstrap/dist/css/bootstrap.css';
-// import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'bootstrap';
 
 import MainApp from './components/main-app/MainApp.vue'
+
 
 export default {
     name: 'App',

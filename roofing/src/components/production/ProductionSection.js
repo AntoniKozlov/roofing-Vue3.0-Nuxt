@@ -1,24 +1,19 @@
 import productionList from '../../consts/productionList';
 import relatedProducts from '../../consts/relatedProducts';
 
-import { Slider, SliderItem } from "vue-easy-slider";
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 export default {
     name: 'ProductionSection',
     components: {
-        Slider,
-        SliderItem
+        Carousel, Slide, Pagination, Navigation
     },
     data() {
         return {
             productionList,
             relatedProducts,
-            sliderValue: 2
+            sliderValue: 1,
         };
     },
-    methods: {
-        changeIndex(index) {
-            this.sliderValue = index;
-        }
-    }
 }
