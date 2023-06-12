@@ -23,7 +23,7 @@ export default {
                 if (this.isElemVisible(elem)) {
                     elem.style.visibility = 'visible';
                     elem.style.transform = 'scale(1)';
-                    elem.style.transform = 'translate3d(0, -10px, 0)'
+                    // elem.style.transform = 'translate3d(0, -10px, 0)'
                     this.fadeInElements.splice(i, 1); // only allow it to run once
                 }
             }
