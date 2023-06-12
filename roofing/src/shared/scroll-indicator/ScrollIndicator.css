@@ -1,0 +1,13 @@
+
+.progress-indicator-wrapper{
+    position: fixed;
+    height: 3px;
+    width: 100%;
+    top: 0px;
+    z-index: 1001;
+}
+
+.progress-indicator-wrapper .progress-indicator{
+    height: 3px;
+    background: black;
+}

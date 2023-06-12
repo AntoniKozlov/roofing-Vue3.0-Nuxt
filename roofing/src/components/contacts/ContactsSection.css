@@ -50,3 +50,53 @@
 .textDecoration {
     text-decoration: black;
 }
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  display: inline-block;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    top: 45%;
+    left: 66%;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px 2px 0 0;
+    position: absolute;
+    transform-origin: 50% 50%;
+  }
+
+  &.up::before { 
+    transform: rotate(-45deg); 
+    margin: -10px 0 0 -15px;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    top: 50%;
+    left: 50%;
+    border-style: solid;
+    border-color: white;
+    position: absolute;
+    transform-origin: 50% 50%;
+  }
+  
+  &.up::after { 
+    width: 0;
+    height: 27px;
+    border-width: 0 2px 0 0;
+    transform: translate(-1px, -14px);
+  }
+  
+  &.circle {
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+}

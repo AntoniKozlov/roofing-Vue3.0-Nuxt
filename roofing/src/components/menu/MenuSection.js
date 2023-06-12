@@ -19,10 +19,10 @@ export default {
         };
     },
     created() {
-        window.addEventListener('scroll', this.onScroll);
+        document.addEventListener('scroll', this.onScroll);
     },
-    destroyed() {
-        window.removeEventListener('scroll', this.onScroll);
+    unmounted() {
+        document.removeEventListener('scroll', this.onScroll);
     },
     methods: {
         onScroll() {

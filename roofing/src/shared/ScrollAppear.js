@@ -3,17 +3,18 @@ export default {
     name: 'ScrollAppear',
     data() {
         return {
-            fadeInElements: []
+            fadeInElements: [],
+            progress: "0%"
         };
     },
     mounted() {
-        this.fadeInElements = Array.from(document.getElementsByClassName('fade-in'))
-        document.addEventListener('scroll', this.handleScroll)
-        this.handleScroll()
+        this.fadeInElements = Array.from(document.getElementsByClassName('fade-in'));
+        document.addEventListener('scroll', this.handleScroll);
+        this.handleScroll();
     },
 
     unmounted() {
-        document.removeEventListener('scroll', this.handleScroll)
+        document.removeEventListener('scroll', this.handleScroll);
     },
     methods: {
         handleScroll() {
@@ -26,12 +27,20 @@ export default {
                     this.fadeInElements.splice(i, 1) // only allow it to run once
                 }
             }
+
+            this.calcProgressPercentage();
         },
         isElemVisible(el) {
             let rect = el.getBoundingClientRect()
             let elemTop = rect.top + 10 // 10 = buffer
             let elemBottom = rect.bottom
             return elemTop < window.innerHeight && elemBottom >= 0
+        },
+        calcProgressPercentage() {
+            const { documentElement, body } = document;
+            let windowScroll = body.scrollTop || documentElement.scrollTop;
+            let height = documentElement.scrollHeight - documentElement.clientHeight;
+            this.progress = (windowScroll / height) * 100 + "%";
         }
     }
 }

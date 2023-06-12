@@ -1,4 +1,4 @@
-<div id="services" class="container-fluid">
+<div id="services" ref="services" class="container-fluid">
     <div class="centered ourServices"><u>Наши услуги</u></div>
     <div class="img-section fade-in" v-for="(service, index) of servicesList" :class="index % 2 === 0 ? 'ltr-direction' : 'rtl-direction'">
         <img v-lazy="service.src" alt=""/>

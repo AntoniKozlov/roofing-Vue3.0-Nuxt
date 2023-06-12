@@ -4,7 +4,9 @@ import PortfolioSection from '../portfolio/PortfolioSection.vue';
 import ServicesSection from '../services/ServicesSection.vue';
 import ProductionSection from '../production/ProductionSection.vue';
 import WorkPlanSection from '../work-plan/WorkPlan.vue';
+import ScrollIndicator from '../../shared/scroll-indicator/ScrollIndicator.vue';
 import ScrollAppear from '../../shared/ScrollAppear';
+
 
 
 export default {
@@ -17,5 +19,6 @@ export default {
         ServicesSection,
         ProductionSection,
         WorkPlanSection,
+        ScrollIndicator
     }
 }

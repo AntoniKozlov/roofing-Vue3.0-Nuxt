@@ -6,8 +6,6 @@
 
 <script>
 //  import Vue from 'vue';
-// import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
-// import VueScrollTo from 'vue-scrollto';
 // import VueScrollIndicator from 'vue-scroll-indicator';
 
 import 'bootstrap/dist/css/bootstrap.css';
@@ -16,22 +14,6 @@ import 'bootstrap';
 
 import MainApp from './components/main-app/MainApp.vue'
 
-// Vue.use(VueScrollIndicator);
-// Vue.use(BootstrapVue);
-// Vue.use(IconsPlugin);
-// Vue.use(VueScrollTo, {
-//     container: "body",
-//     duration: 500,
-//     easing: "ease",
-//     offset: 0,
-//     force: true,
-//     cancelable: true,
-//     onStart: false,
-//     onDone: false,
-//     onCancel: false,
-//     x: false,
-//     y: true
-// });
 export default {
     name: 'App',
     components: {
@@ -41,19 +23,12 @@ export default {
 </script>
 
 <style>
-/* #Primary
-    ================================================== */
-    body {
+body {
     font-family: 'Times New Roman', sans-serif;
-    /*Comic Sans MS, Monotype Corsiva*/
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
     color: #212112;
-    /* background-image: url('./assets/pat-back.svg');
-         background-position: center;
-         background-repeat: repeat;
-         background-size: 7%;*/
     background-color: #fff;
     overflow-x: hidden;
     transition: all 200ms linear;
