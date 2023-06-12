@@ -7,7 +7,7 @@
         оговариваются по следующей схеме:</h5>
     </div>
     <div class="row" v-for="(plan, index) in workPlan">
-        <div class="img-section" :class="index % 2 === 0 ? 'ltr-direction img-section-left' : 'rtl-direction img-section-right'">
+        <div class="img-section" :class="index % 2 === 0 ? 'img-section-left' : 'row-reverse img-section-right'">
             <img class="fade-in" v-lazy="plan.src" alt=""/>
             <div class="img-data fade-in">
                 <h2 class="textCenter">{{plan.title}}</h2>

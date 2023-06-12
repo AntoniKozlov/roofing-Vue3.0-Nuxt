@@ -160,17 +160,13 @@ h1 span:nth-child(15) {
 }
 
 .fade-in {
-    opacity: 0;
-    transform: scale(0.8);
+    visibility: hidden;
+    transform: scale(0.8); 
     box-sizing: border-box;
     transition: 1.3s all cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
-.ltr-direction {
-    direction: ltr;
-}
-
-.rtl-direction {
-    direction: rtl;
+.row-reverse {
+    flex-direction: row-reverse;
 }
 </style>

@@ -21,10 +21,10 @@ export default {
             for (let i = 0; i < this.fadeInElements.length; i++) {
                 let elem = this.fadeInElements[i]
                 if (this.isElemVisible(elem)) {
-                    elem.style.opacity = '1'
-                    elem.style.transform = 'scale(1)'
+                    elem.style.visibility = 'visible';
+                    elem.style.transform = 'scale(1)';
                     elem.style.transform = 'translate3d(0, -10px, 0)'
-                    this.fadeInElements.splice(i, 1) // only allow it to run once
+                    this.fadeInElements.splice(i, 1); // only allow it to run once
                 }
             }
 

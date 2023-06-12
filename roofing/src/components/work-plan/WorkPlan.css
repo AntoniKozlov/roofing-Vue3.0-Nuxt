@@ -88,6 +88,10 @@
 }
 
 @media only screen and (max-width: 900px) {
+    .img-section.row-reverse {
+        flex-flow: row wrap-reverse;
+    }
+
     .img-section {
         flex-flow: row wrap;
     }
