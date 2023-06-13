@@ -1,4 +1,4 @@
-export default function (app) {
+export default defineNuxtPlugin(({vueApp}) => { 
     function moveScrollTo(e, targetId) {
         e.preventDefault();
         
@@ -10,7 +10,7 @@ export default function (app) {
         });
     }
 
-    app.directive('scroll-to', {
+    vueApp.directive('scroll-to', {
         mounted(el, binding) {
             el.addEventListener('click', (e) => moveScrollTo(e, binding.value));
         },
@@ -18,4 +18,4 @@ export default function (app) {
             el.removeEventListener('click', moveScrollTo);
         },
     });
-}
+});

@@ -1,25 +1,4 @@
-<template>
-  <div>
-      <MainApp />
-  </div>
-</template>
 
-<script>
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap';
-
-import MainApp from './components/main-app/MainApp.vue'
-
-
-export default {
-    name: 'App',
-    components: {
-        MainApp,
-    },
-}
-</script>
-
-<style>
 body {
     font-family: 'Times New Roman', sans-serif;
     font-size: 16px;
@@ -169,4 +148,112 @@ h1 span:nth-child(15) {
 .row-reverse {
     flex-direction: row-reverse;
 }
-</style>
+
+.homeImage {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    width: 100%;
+    min-height: 400px;
+    margin: auto;
+    height: 100vh;
+    background: url('~/assets/home.jpg') 0 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.textRight {
+    text-align: right;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0px;
+}
+
+.marginAuto {
+    margin: auto;
+}
+
+.backgroundHomeBlocks {
+    display: flex;
+    height: 50px;
+    width: 350px;
+    min-width: 350px;
+    background-color: snow;
+    opacity: .8;
+    color: black;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
+    font-family: 'Times New Roman', monospace;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showLeft {
+
+    from {
+        left: -50px;
+    }
+
+    to {
+        left: 0;
+    }
+
+}
+
+.swing:hover {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.minHeight{
+    min-height: 200px;
+}
+
+@media (max-width: 767px) {
+    .backgroundHomeBlocks{
+        opacity: 0.5;
+    }
+}

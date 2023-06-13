@@ -1,5 +1,5 @@
-export default function (app) {
-    app.directive('lazy', {
+export default defineNuxtPlugin(({vueApp}) => {
+    vueApp.directive('lazy', {
         beforeMount(el, binding) {
             if (/\S+/.test(binding.value)) {
                 const observer = new IntersectionObserver(entries => {
@@ -24,6 +24,6 @@ export default function (app) {
             if (el.$lazy) {
                 el.$lazy.unobserve(el);
             }
-        }
+        },
     });
-}
+});
