@@ -3,7 +3,7 @@
     <div class="img-section fade-in" v-for="(service, index) of servicesList" :class="{'row-reverse': index % 2 !== 0}">
         <img v-lazy="service.src" alt=""/>
         <div class="img-data">
-            <p><h5 class="textCenter">{{service.description}}</h5></p>
+            <h5 class="textCenter">{{service.description}}</h5>
         </div>
     </div>
 </div>

@@ -6,11 +6,11 @@
         оговариваются по следующей схеме:</h5>
     </div>
     <div class="row" v-for="(plan, index) in workPlan">
-        <div class="img-section" :class="index % 2 === 0 ? 'img-section-left' : 'row-reverse img-section-right'">
-            <img class="fade-in" v-lazy="plan.src" alt=""/>
-            <div class="img-data fade-in">
+        <div class="img-section fade-in" :class="index % 2 === 0 ? 'img-section-left' : 'row-reverse img-section-right'">
+            <img v-lazy="plan.src" alt=""/>
+            <div class="img-data">
                 <h2 class="textCenter">{{plan.title}}</h2>
-                <p><h5 class="textLeft">{{plan.description}}</h5></p>
+                <h5 class="textLeft">{{plan.description}}</h5>
             </div>
         </div>
     </div>

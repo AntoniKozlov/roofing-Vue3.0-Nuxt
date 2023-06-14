@@ -142,7 +142,7 @@ h1 span:nth-child(15) {
     visibility: hidden;
     transform: scale(0.8); 
     box-sizing: border-box;
-    transition: 1s all cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .row-reverse {

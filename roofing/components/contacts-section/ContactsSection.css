@@ -5,25 +5,16 @@
     width: 100%;
 }
 
-.styleIcon {
-    cursor: pointer;
-    -moz-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    -webkit-transition: all 0.5s ease-out;
-}
-
-.styleIcon:hover {
-    transform: scale(1.1);
-}
-
 .instBlock {
-    margin: auto 40px;
+    margin: auto 30px;
 }
 
 .contactsElem {
     justify-content: space-around;
     display: flex;
     background-color: #337AB7;
+    margin-left: unset;
+    margin-right: unset;
 }
 
 .copyrightLabel {
