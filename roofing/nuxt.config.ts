@@ -33,10 +33,5 @@ export default defineNuxtConfig({
         { textContent: "Сожалеем, но теремок-кровля не работает должным образом без включенного JavaScript. Пожалуйста, активируйте для продолжения." }
       ]
     }
-  },
-  nitro: {
-    prerender: {
-      crawlLinks: true
-    }
   }
 });
