@@ -1,15 +1,3 @@
-// import $ from "jquery";
-
-// $('body').on('mouseenter mouseleave', '.nav-item', function (e) {
-//     if ($(window).width() > 750) {
-//         var _d = $(e.target).closest('.nav-item');
-//         _d.addClass('show');
-//         setTimeout(function () {
-//             _d[_d.is(':hover') ? 'addClass' : 'removeClass']('show');
-//         }, 1);
-//     }
-// });
-
 export default {
     name: 'MenuSection',
     data() {
@@ -39,6 +27,12 @@ export default {
                 this.isStartStyle = true;
                 this.isScrollOn = false;
             }
-        }
+        },
+        onMouseNavItemContacts(e) {
+            if (window.innerWidth > 750) {
+                const $navItem = e.target;
+                $navItem.classList[e.type === 'mouseenter' ? 'add' : 'remove']('show');
+            }
+        },
     }
 }

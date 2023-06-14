@@ -29,7 +29,7 @@
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                     <a class="nav-link" href="#" v-scroll-to="'workPlan'">План работы</a>
                                 </li>
-                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" v-on:mouseenter="onMouseNavItemContacts" v-on:mouseleave="onMouseNavItemContacts">
                                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
                                        aria-haspopup="true" aria-expanded="false" href="#" v-scroll-to="'contacts'">Контакты</a>
                                     <div class="dropdown-menu">
