@@ -1,5 +1,5 @@
 <div class="hero-anime">
-    <div class="navigation-wrap bg-light start-header" :class="{'start-style': isStartStyle, 'scroll-on': isScrollOn}">
+    <div class="navigation-wrap bg-light start-header" v-nav-behavior>
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -29,7 +29,7 @@
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                     <a class="nav-link" href="#" v-scroll-to="'workPlan'">План работы</a>
                                 </li>
-                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" v-on:mouseenter="onMouseNavItemContacts" v-on:mouseleave="onMouseNavItemContacts">
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" v-section-visibility>
                                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
                                        aria-haspopup="true" aria-expanded="false" href="#" v-scroll-to="'contacts'">Контакты</a>
                                     <div class="dropdown-menu">

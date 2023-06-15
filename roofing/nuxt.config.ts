@@ -11,6 +11,10 @@ export default defineNuxtConfig({
     {src: '~/plugins/LazyImage.client.js', mode: 'client'}, 
     {src: '~/plugins/LazyImage.server.js', mode: 'server'}, 
     {src: '~/plugins/UseBootstrap.client.js', mode: 'client'}, 
+    {src: '~/plugins/VisibilitySection.client.js', mode: 'client'}, 
+    {src: '~/plugins/VisibilitySection.server.js', mode: 'server'}, 
+    {src: '~/plugins/NavBehavior.client.js', mode: 'client'}, 
+    {src: '~/plugins/NavBehavior.server.js', mode: 'server'}, 
   ],
   css: ["bootstrap/dist/css/bootstrap.min.css"],
   app: {
