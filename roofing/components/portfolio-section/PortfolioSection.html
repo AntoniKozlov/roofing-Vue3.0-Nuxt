@@ -2,10 +2,10 @@
     <div class="centered ourProduction"><u>Портфолио</u></div>
     <ul class="nav nav-tabs centered">
         <li v-for="(itemList, index) in arrayPortfolio">
-            <button class="btn colors marginElements widthLi" :class="[index === selectedIndex ? 'active' : '']"
+            <div class="tab btn marginElements widthLi" :class="[index === selectedIndex ? 'active' : '']"
                     aria-current="page"
                     @click="changeActive(index)">{{itemList.name}}
-            </button>
+            </div>
         </li>
     </ul>
     <div class="centered">

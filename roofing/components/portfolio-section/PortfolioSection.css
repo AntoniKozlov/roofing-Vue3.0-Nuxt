@@ -3,7 +3,7 @@
 }
 
 .marginElements {
-    margin: 0 5px;
+    margin: 5px 5px;
 }
 
 .widthLi {
@@ -89,7 +89,23 @@
     cursor: zoom-out;
 }
 
-.colors {
-    background-color: #337AB7;
-    color: white;
+.tab {
+    cursor: pointer;
+    padding:10px 20px;
+    background:rgba(191, 226, 255, 0.8);
+    display:inline-block;
+    color:black;
+    border: unset;
+    border-radius:5px;
+    box-shadow: 0 0.5rem 0.8rem #00000080;
+}
+
+.tab.active {
+    background:#fffffff6;
+    color:#000;
+    border-top: 3px solid #337AB7;
+}
+
+.nav-tabs {
+    border-bottom: unset;
 }
