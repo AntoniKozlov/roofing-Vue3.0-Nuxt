@@ -1,8 +1,26 @@
-<div id="mainApp">
-    <client-only>
-        <ScrollIndicator/>
-    </client-only>
-    <Menu></Menu>
+<script>
+
+    import ContactsSection from '../components/contacts-section/ContactsSection.vue';
+    import PortfolioSection from '../components/portfolio-section/PortfolioSection.vue';
+    import ServicesSection from '../components/services-section/ServicesSection.vue';
+    import ProductionSection from '../components/production-section/ProductionSection.vue';
+    import WorkPlanSection from '../components/work-plan/WorkPlan.vue';
+
+    export default {
+        name: 'index',
+        components: {
+            ContactsSection,
+            PortfolioSection,
+            ServicesSection,
+            ProductionSection,
+            WorkPlanSection,
+        }
+    }
+
+</script>
+
+<template>
+
     <div id="home" class="home">
         <div class="homeImage">
             <div class="container-fluid h-100 minHeight">
@@ -45,4 +63,5 @@
     <PortfolioSection/>
     <WorkPlanSection/>
     <ContactsSection/>
-</div>
+
+</template>
